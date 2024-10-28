@@ -9,8 +9,8 @@ O primeiro passo para a configuração da ferramenta de Backstage é a instalaç
 npx @backstage/create-app 
 ```
 
-![image](./ponderada-semana-2/imgs/1.png)
-![image](./ponderada-semana-2/imgs/2.png)
+![image](./imgs/1.png)
+![image](./imgs/2.png)
 
 Após a instalação da ferramenta, uma série de recursos serão instalados e configurados. É possível iniciar a aplicação pelo yarn:
 
@@ -18,11 +18,11 @@ Após a instalação da ferramenta, uma série de recursos serão instalados e c
 yarn dev
 ```
 
-![image](./ponderada-semana-2/imgs/3.png)
+![image](./imgs/3.png)
 
 E a aplicação será iniciada:
 
-![image](./ponderada-semana-2/imgs/4.png)
+![image](./imgs/4.png)
 
 
 ## Mudança para SQLite
@@ -337,7 +337,7 @@ Primeiro, crie a imagem docker com o seguinte comando:
 docker build -t ponderada-semana-2 .
 ```
 
-![image](./ponderada-semana-2/imgs/5.png)
+![image](./imgs/5.png)
 
 e por fim, crie e rode o container docker:
 
