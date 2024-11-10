@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "gLyY6FmJVl0=",
+  "success": true,
+  "projectFilePath": "/workspaces/m10-ponderadas/ponderada-semana-4/ponderada-semana-4.csproj",
+  "expectedPackageFiles": [
+    "/home/codespace/.nuget/packages/system.diagnostics.diagnosticsource/8.0.1/system.diagnostics.diagnosticsource.8.0.1.nupkg.sha512"
+  ],
+  "logs": []
+}
