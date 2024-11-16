@@ -1,39 +1,30 @@
-﻿using System;
-using System.Diagnostics.Metrics;
-using System.Threading;
-
-class Program
+﻿public class MetricTests
 {
-    static Meter s_meter = new Meter("HatCo.Store");
-    static Counter<int> s_hatsSold = s_meter.CreateCounter<int>("hatco.store.hats_sold");
-
-    static void Main(string[] args)
+    [Fact]
+    public void SaleIncrementsHatsSoldCounter()
     {
-        Console.WriteLine("Press any key to exit");
+        // Arrange
+        var services = CreateServiceProvider();
+        var metrics = services.GetRequiredService<HatCoMetrics>();
+        var meterFactory = services.GetRequiredService<IMeterFactory>();
+        var collector = new MetricCollector<int>(meterFactory, "HatCo.Store", "hatco.store.hats_sold");
 
-        var metrics = new HatCoMetrics();
+        // Act
+        metrics.HatsSold(15);
 
-        while(!Console.KeyAvailable)
-        {
-            // Simulação de venda de 4 chapéus por segundo
-            Thread.Sleep(1000);
-            s_hatsSold.Add(4);
-        }
-    }
-}
-
-public class HatCoMetrics
-{
-    private readonly Counter<int> _hatsSold;
-
-    public HatCoMetrics()
-    {
-        var meter = new Meter("HatCo.Store");
-        _hatsSold = meter.CreateCounter<int>("hatco.store.hats_sold");
+        // Assert
+        var measurements = collector.GetMeasurementSnapshot();
+        Assert.Equal(1, measurements.Count);
+        Assert.Equal(15, measurements[0].Value);
     }
 
-    public void HatsSold(int quantity)
+    // Setup a new service provider. This example creates the collection explicitly but you might leverage
+    // a host or some other application setup code to do this as well.
+    private static IServiceProvider CreateServiceProvider()
     {
-        _hatsSold.Add(quantity);
+        var serviceCollection = new ServiceCollection();
+        serviceCollection.AddMetrics();
+        serviceCollection.AddSingleton<HatCoMetrics>();
+        return serviceCollection.BuildServiceProvider();
     }
 }
