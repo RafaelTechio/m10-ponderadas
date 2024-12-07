@@ -6,10 +6,8 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddMetrics();
 
 var app = builder.Build();
-
-// Use métricas do Prometheus
-app.UseMetricServer(); // Adiciona endpoint padrão para Prometheus (/metrics)
-
+app.Urls.Add("http://*:5190");
+app.UseMetricServer();
 app.MapGet("/", () => "Hello World!");
-
 app.Run();
+

@@ -1026,24 +1026,26 @@
     ]
   },
   "packageFolders": {
-    "/home/codespace/.nuget/packages/": {}
+    "C:\\Users\\Inteli\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/workspaces/m10-ponderadas/ponderada-semana-8/WebMetric/WebMetric.csproj",
+      "projectUniqueName": "C:\\Users\\Inteli\\Documents\\Github\\Inteli\\modulo10-cicd\\m10-ponderadas\\ponderada-semana-8\\WebMetric\\WebMetric.csproj",
       "projectName": "WebMetric",
-      "projectPath": "/workspaces/m10-ponderadas/ponderada-semana-8/WebMetric/WebMetric.csproj",
-      "packagesPath": "/home/codespace/.nuget/packages/",
-      "outputPath": "/workspaces/m10-ponderadas/ponderada-semana-8/WebMetric/obj/",
+      "projectPath": "C:\\Users\\Inteli\\Documents\\Github\\Inteli\\modulo10-cicd\\m10-ponderadas\\ponderada-semana-8\\WebMetric\\WebMetric.csproj",
+      "packagesPath": "C:\\Users\\Inteli\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Inteli\\Documents\\Github\\Inteli\\modulo10-cicd\\m10-ponderadas\\ponderada-semana-8\\WebMetric\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/home/codespace/.nuget/NuGet/NuGet.Config"
+        "C:\\Users\\Inteli\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -1099,7 +1101,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/8.0.402/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

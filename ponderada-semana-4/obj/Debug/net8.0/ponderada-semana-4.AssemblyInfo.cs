@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ponderada-semana-4")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6b5e4512391d93f628ecf31faa99436cdf292f34")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ef3dd4b8aeab19b8f9a9eea77745918900a48559")]
 [assembly: System.Reflection.AssemblyProductAttribute("ponderada-semana-4")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ponderada-semana-4")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
