@@ -1,5 +1,16 @@
 # Ponderada Semana 8
 
+Este repositório contém o código para a atividade da semana 8 do módulo 10, focado na coleta de métricas de um aplicativo ASP.NET Core, utilizando Prometheus para monitoramento e Grafana para visualização de métricas.
+
+## Objetivo
+O objetivo deste projeto é implementar um sistema para coletar métricas de um aplicativo ASP.NET Core e configurar o Prometheus para coleta dessas métricas. Além disso, o Grafana será configurado para exibir essas métricas por meio de gráficos interativos.
+
+## Tecnologias Utilizadas
+
+- **ASP.NET Core 8.0**: Framework utilizado para a aplicação backend.
+- **Prometheus**: Sistema de monitoramento de métricas e coleta de dados.
+- **Grafana**: Plataforma de visualização de métricas e criação de dashboards.
+
 ## Tutorial Passo a Passo
 ```
 dotnet new web -o WebMetric
