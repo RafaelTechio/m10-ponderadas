@@ -1,26 +1,14 @@
-using Microsoft.AspNetCore.Http.Features;
+using Prometheus;
 
-var builder = WebApplication.CreateBuilder();
+var builder = WebApplication.CreateBuilder(args);
+
+// Adicione serviços de métricas
+builder.Services.AddMetrics();
+
 var app = builder.Build();
 
-app.Use(async (context, next) =>
-{
-    var tagsFeature = context.Features.Get<IHttpMetricsTagsFeature>();
-    if (tagsFeature != null)
-    {
-        var source = context.Request.Query["utm_medium"].ToString() switch
-        {
-            "" => "none",
-            "social" => "social",
-            "email" => "email",
-            "organic" => "organic",
-            _ => "other"
-        };
-        tagsFeature.Tags.Add(new KeyValuePair<string, object?>("mkt_medium", source));
-    }
-
-    await next.Invoke();
-});
+// Use métricas do Prometheus
+app.UseMetricServer(); // Adiciona endpoint padrão para Prometheus (/metrics)
 
 app.MapGet("/", () => "Hello World!");
 

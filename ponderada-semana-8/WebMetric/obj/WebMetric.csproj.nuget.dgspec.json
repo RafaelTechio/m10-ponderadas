@@ -50,6 +50,10 @@
             "OpenTelemetry.Extensions.Hosting": {
               "target": "Package",
               "version": "[1.10.0, )"
+            },
+            "prometheus-net.AspNetCore": {
+              "target": "Package",
+              "version": "[8.2.1, )"
             }
           },
           "imports": [
