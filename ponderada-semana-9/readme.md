@@ -51,3 +51,35 @@ terraform -help
 ```
 
 ![image](https://github.com/user-attachments/assets/c9915d92-28b6-440b-802d-a1f4faad6c2f)
+
+## Criando configuração
+
+Criando pasta do terraform:
+
+![image](https://github.com/user-attachments/assets/1f2cb36d-c348-4478-8b6b-20ec293b72d8)
+
+Criando arquivo main.tf:
+
+![image](https://github.com/user-attachments/assets/7eab1764-58a4-4b6e-9c2c-475093848758)
+
+## Executando Terraform
+
+```
+terraform init
+```
+
+![image](https://github.com/user-attachments/assets/ebe91cc0-5775-4acb-bed0-223a07338bf8)
+
+
+```
+terraform fmt
+```
+
+![image](https://github.com/user-attachments/assets/2dfa872d-008f-4954-9e0d-f7f15adf3864)
+
+```
+terraform validate
+```
+
+![image](https://github.com/user-attachments/assets/92e86bd7-81e1-4480-a267-a32f68e4bc81)
+
